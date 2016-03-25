@@ -3,11 +3,8 @@ MAINTAINER lukasz@burylo.com
 
 ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
-#
-# # Add common scripts (from _localscripts)
-ADD scripts.tar /
-#
-# # Init bootstrap (and install ansible)
+
+# # Init bootstrap 
 RUN export DEBIAN_FRONTEND=noninteractive \
     && set -x \
     # Fix root terminal
