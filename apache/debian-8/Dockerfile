@@ -8,8 +8,6 @@ RUN sed -ri ' \
     s!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g; \
     ' /etc/apache2/apache2.conf
 
-RUN a2enmod rewrite
-
 EXPOSE 80
 
 CMD ["apache2 -D foreground"]
